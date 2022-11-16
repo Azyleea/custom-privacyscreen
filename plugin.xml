@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-privacyscreen" version="0.3.1">
+
+	<name>PrivacyScreenPlugin</name>
+	<description>Secures your app from displaying a screenshot in task switchers under Android and iOS. Keeps sensitive information private.</description>
+	<license>MIT</license>
+
+  <RelativeLayout android:id="@+id/customSplash" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/backgroundColor" android:elevation="5dp">
+
+    <ImageView android:id="@+id/imageView" android:layout_width="202dp" android:layout_height="157dp" android:layout_centerInParent="true" app:srcCompat="@drawable/yourImage" />
+ </RelativeLayout>
+
+	<platform name="android">
+
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="PrivacyScreenPlugin">
+        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+		<source-file src="src/android/PrivacyScreenPlugin.java" target-dir="src/org/devgeeks/privacyscreen"/>
+	</platform>
+
+	<platform name="ios">
+
+    <config-file parent="/*" target="config.xml">
+      <feature name="PrivacyScreenPlugin">
+        <param name="ios-package" value="PrivacyScreenPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+		<header-file src="src/ios/PrivacyScreenPlugin.h"/>
+		<source-file src="src/ios/PrivacyScreenPlugin.m"/>
+	</platform>
+</plugin>

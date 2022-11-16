@@ -1,0 +1,29 @@
+{
+  "name": "@azyleea/custom-privacyscreen",
+  "version": "0.1.0",
+  "description": "Secures your app from displaying a screenshot in task switchers under Android and iOS. Keeps sensitive information private.",
+  "cordova": {
+    "id": "custom-privacyscreen",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azyleea/custom-privacyscreen.git"
+  },
+  "keywords": [
+    "privacy",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "azyleea <hanies.leea@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Azyleea/custom-privacyscreen/issues"
+  },
+  "homepage": "https://github.com/Azyleea/custom-privacyscreen#readme"
+}
